@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Agent Team Workflow"
+  short_description: "Traceable multi-agent workflows for Codex"
+  default_prompt: "Use $codex-agent-team-workflow to set up a multi-agent workflow for this project."
