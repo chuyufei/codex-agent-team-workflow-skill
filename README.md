@@ -30,7 +30,6 @@ skills/codex-agent-team-workflow/     Codex Skill package / Skill 包
 docs/USAGE.md                         Usage workflow / 使用流程
 docs/中文说明.md                      Chinese overview / 中文说明
 docs/EXAMPLE_PROJECT_SETUP.md         Example team setups / 示例
-scripts/prepublish_check.py           Pre-publish safety check / 发布前检查
 ```
 
 ## Install / 安装
@@ -96,12 +95,6 @@ When thread-management tools are available, use them for agent setup and handoff
 ## Publish Checklist / 发布检查
 
 Before publishing or packaging this repository:
-
-```powershell
-python .\scripts\prepublish_check.py
-```
-
-Also confirm:
 
 - Run the bootstrap script once with at least one profile and once with `--language zh`.
 - Check that `SKILL.md` frontmatter contains only `name` and `description`.
