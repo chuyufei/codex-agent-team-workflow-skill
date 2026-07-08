@@ -1,14 +1,14 @@
-# Video-Derived Principles
+# Workflow Principles
 
-These principles summarize the provided transcript and should be preserved when adapting the workflow.
+These principles should be preserved when adapting the workflow to a specific project.
 
-## Long-lived threads become agents
+## Long-lived threads can become agents
 
 A Codex conversation can be treated as a durable agent when it has:
 
 - a stable name
 - a role boundary
-- a thread ID
+- a thread ID when available
 - a log
 - a workspace or output area
 - a known communication path
@@ -17,7 +17,13 @@ The value is accumulated context and continuity, not roleplay.
 
 ## Register agents before delegating
 
-Maintain an agent registry like a team address book. Store each agent's name, responsibility, thread ID, and workspace. Message delivery is easier when the coordinator can say "send this to the development agent" instead of rediscovering thread IDs.
+Maintain an agent registry like a team address book. Store each agent's name, responsibility, thread ID when available, and workspace. Message delivery is easier when the coordinator can say "send this to the development agent" instead of rediscovering thread IDs.
+
+## Confirm the mechanism before expanding the team
+
+Start by decomposing the user's request into ownership surfaces, evidence needs, validation gates, and handoff points. Then ask the user to confirm the proposed collaboration mechanism before creating threads or generating files, unless they explicitly requested an immediate bootstrap.
+
+Built-in profiles are starter templates. They should not prevent a better task-specific topology for SaaS work, data analysis, GitHub PRs, content publishing, or other specialized workflows.
 
 ## Use a standard message format
 
@@ -39,11 +45,11 @@ Continue until the version matches the planned expectations or a blocker is expl
 
 ## Split work to reduce context pollution
 
-Separate agents because each thread should focus on a domain: planning, implementation, validation, topic selection, content creation, material production, data review, etc. The split keeps irrelevant context from contaminating the judgment of another role.
+Separate agents because each thread should focus on a domain: planning, implementation, validation, topic selection, content creation, material production, data review, release, documentation, etc. The split keeps irrelevant context from contaminating the judgment of another role.
 
 ## Run the pipeline asynchronously when possible
 
-Some tasks are slow, such as image generation, data review, or implementation. Splitting agents lets one workstream continue while another waits for output.
+Some tasks are slow, such as asset generation, data review, or implementation. Splitting agents lets one workstream continue while another waits for output.
 
 ## Start with three agents when unsure
 

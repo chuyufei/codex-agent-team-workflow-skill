@@ -1,5 +1,17 @@
 # Workflow Guide
 
+## First Move
+
+Start from the user's actual request, not from a fixed profile.
+
+1. Restate the task outcome and the risk of doing it in one thread.
+2. Propose the smallest useful collaboration mechanism.
+3. Name the real ownership boundaries, such as requirements, design, data, implementation, validation, documentation, or release.
+4. Define each proposed agent's input, output, allowed paths, forbidden paths, and validation gate.
+5. Ask the user to confirm before creating threads, dispatching agents, or generating coordination files.
+
+Chinese principle: decompose the mechanism first, then ask the user to confirm it. `generic`, `web-static`, and `content-team` are starting points, not fixed organization structures.
+
 ## Decision Rule
 
 Use a multi-agent workflow when at least one of these is true:
@@ -40,9 +52,11 @@ This prevents one thread from making the plan, writing the work, and judging its
 ### Content operations team
 
 - `topic`: topic planning and content calendar.
-- `content`: outline, script, copy, publishing notes.
-- `material`: covers, images, screenshots, B-roll lists, asset preparation.
+- `content`: outline, copy, publishing notes.
+- `material`: covers, images, screenshots, asset preparation.
 - `review`: data pull, performance review, lessons, strategy adjustment.
+
+Profiles should be adapted or reduced when the user's request is narrower than the template. A confirmed two-agent or single-thread plan is better than an oversized team.
 
 ## Standard Loop
 
@@ -58,6 +72,7 @@ This prevents one thread from making the plan, writing the work, and judging its
 Pause for the user when:
 
 - The direction is ambiguous and a wrong assumption would change the product.
+- The proposed collaboration mechanism has not been confirmed.
 - A production edit or release action needs explicit approval.
 - A generated preview needs user selection before implementation.
 - External credentials, login, payment, or private accounts are required.
@@ -78,4 +93,4 @@ Every non-trivial handoff must preserve:
 - evidence requested
 - current status
 
-Use this as the "agent communication ledger" so later debugging can answer who asked for what, who executed it, and why.
+Use this as the agent communication ledger so later debugging can answer who asked for what, who executed it, and why.

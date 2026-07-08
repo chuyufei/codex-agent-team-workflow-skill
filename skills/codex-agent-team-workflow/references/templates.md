@@ -1,5 +1,36 @@
 # Templates
 
+## Collaboration Mechanism Proposal
+
+Use this before creating threads or applying a profile.
+
+```markdown
+# Collaboration Mechanism Proposal
+
+## User Request
+
+{one_paragraph_summary}
+
+## Recommended Shape
+
+- Use multi-agent workflow: yes | no
+- Reason:
+- Proposed profile: generic | web-static | content-team | custom | none
+- Why this profile is only a starting point:
+
+## Proposed Agents
+
+| Agent | Owns | Input | Output | Allowed paths | Forbidden paths | Validation gate |
+| --- | --- | --- | --- | --- | --- | --- |
+| manager | requirements, scope, acceptance criteria | user request | task brief | docs/, coordination files | production implementation | user confirms scope |
+| executor | scoped work | manager brief | changed files or artifact | assigned files | out-of-scope files | evidence ready for validator |
+| validator | independent check | brief and executor evidence | pass/fail report | tests, reports, screenshots | implementation unless asked | criteria pass |
+
+## Please Confirm
+
+Reply with approval or changes before I create threads, dispatch agents, or generate coordination files.
+```
+
 ## Agent Registry
 
 ```markdown
@@ -14,6 +45,7 @@ Updated: YYYY-MM-DD
 - Specialist agents own specialist judgments.
 - No agent edits outside its allowed paths without a new handoff.
 - Release actions require explicit user approval.
+- Profiles are starting points; confirmed project boundaries override default templates.
 
 ## Agents
 
